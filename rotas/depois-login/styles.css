@@ -1,0 +1,160 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("./images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background: rgba(9, 22, 65, 0.4);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  header {
+    width: 100%;
+    height: 4.5rem;
+    background: #1974d2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header img {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+  }
+  
+  header nav {
+    margin-right: 1rem;
+  }
+  
+  header nav ul {
+    width: 12rem;
+  }
+  
+  header nav ul li {
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+  }
+
+  header nav ul li a img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main nav {
+    width: 16rem;
+    height: 2.4rem;
+    background: #00031f;
+  }
+  
+  main nav ul {
+    margin: 0.4rem 0.5rem;
+  }
+  
+  main nav ul li a {
+    color: white;
+  }
+  
+  main section {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main section article {
+    width: 80%;
+    height: 5rem;
+    background: #00031f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main section article h2 {
+    color: white;
+    font-size: 2rem;
+  }
+  
+  main section #melhores_ofertas_imagens {
+    max-width: 90%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  main section #melhores_ofertas_imagens img {
+    width: 200px;
+    height: 200px;
+    margin: 1rem;
+  }
+  
+  @media (min-width: 700px) {
+    #logo h1 {
+      font-size: 2.4rem;
+    }
+  
+    header nav ul {
+      width: 14rem;
+    }
+  
+    header nav ul li a {
+      font-size: 1.2rem;
+    }
+  
+    main nav {
+      width: 20rem;
+      height: 3rem;
+    }
+  
+    main nav ul {
+      margin: 0.5rem 1rem;
+    }
+  
+    main nav ul a {
+      font-size: 1.4rem;
+    }
+  
+    main section article {
+      width: 60%;
+      height: 5rem;
+    }
+  
+    main section article h2 {
+      font-size: 3rem;
+    }
+  
+    main section #melhores_ofertas_imagens {
+      margin-top: 1rem;
+      max-width: 70%;
+    }
+  
+    main section #melhores_ofertas_imagens img {
+      width: 200px;
+      height: 200px;
+      margin: 0.6rem;
+    }
+  }
+  

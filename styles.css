@@ -30,19 +30,10 @@ header {
   justify-content: space-between;
 }
 
-#logo {
-  display: flex;
-  align-items: center;
-}
-
-#logo img {
+header img {
   width: 4rem;
   height: 4rem;
   margin-left: 1rem;
-}
-
-#logo h1 {
-  font-size: 1.8rem;
 }
 
 header nav {

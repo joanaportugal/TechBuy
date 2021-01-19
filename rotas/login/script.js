@@ -18,7 +18,6 @@ login_form.addEventListener("submit", (e) => {
     if (valores_iguais) {
       lista.forEach((elemento) => {
         if (elemento.email === email && elemento.password === password) {
-          console.log("a");
           elemento["a_usar"] = true;
         }
       });

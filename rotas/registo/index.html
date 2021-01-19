@@ -5,7 +5,7 @@
     <link rel="icon" href="./images/icon.png" sizes="16x16" type="image/png" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="../../reset.css">
-    <title>Login</title>
+    <title>Registo</title>
 </head>
 <body>
     <header>
@@ -13,23 +13,27 @@
 
         <nav>
           <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="../registo/index.html">Registo</a></li>
+            <li><a href="../login/index.html">Login</a></li>
+            <li><a href="#">Registo</a></li>
           </ul>
         </nav>
     </header>
     <main>
         <section>
-                <h1>Login</h1>
+                <h1>Registo</h1>
                 <br>
                 <div id="box">
                         <img src="../../images/forms.jpg" alt="pc"/>
-                        <form id="login_form">
+                        <form id="registo_form">
+                            <label for="username">Nome de utilizador</label>
+                            <input type="text" id="username" name="username" required>
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" required>
-                            <input type="submit" value="Login" id="login_btn">
+                            <label for="c_password">Confirmar Password</label>
+                            <input type="password" id="c_password" name="c_password" required>
+                            <input type="submit" value="Registar" id="registo_btn">
                         </div>
                 </div>
                 </br>

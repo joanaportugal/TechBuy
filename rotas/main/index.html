@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../images/icon.png" sizes="16x16" type="image/png" />
+    <link
+      rel="icon"
+      href="../../images/icon.png"
+      sizes="16x16"
+      type="image/png"
+    />
     <link rel="stylesheet" href="../../reset.css" />
     <link rel="stylesheet" href="./styles.css" />
     <title>TechBuy</title>
@@ -53,11 +58,18 @@
       <a href="#">Enviar opinião</a>
       <div>
         <p>Escola Superior de Media Artes e Design</p>
-        <p>Rua D.Sancho I, n.º 981<br/>4480-876 Vila do Conde</p>
+        <p>Rua D.Sancho I, n.º 981<br />4480-876 Vila do Conde</p>
         <p>Telefone: +351 252 291 700</p>
         <p>Email: geral@esmad.ipp.pt</p>
       </div>
     </footer>
   </body>
   <script src="../geral.js"></script>
+  <script>
+    let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
+    let fez_login = lista_users.find((elemento) => elemento.a_usar === true);
+    if (!fez_login) {
+      location.href = "http://127.0.0.1:5500/index.html";
+    }
+  </script>
 </html>

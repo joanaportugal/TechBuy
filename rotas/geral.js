@@ -10,7 +10,7 @@ logout.addEventListener("click", (e) => {
   e.preventDefault();
   let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
   lista_users.forEach((elemento) => {
-    if (elemento.a_usar === true) {
+    if (elemento.a_usar) {
       elemento["a_usar"] = false;
     }
   });

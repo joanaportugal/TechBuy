@@ -29,5 +29,12 @@
     </header>
     <main></main>
   </body>
+  <script>
+    let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
+    let fez_login = lista_users.find((elemento) => elemento.a_usar === true);
+    if (!fez_login) {
+      location.href = "http://127.0.0.1:5500/index.html";
+    }
+  </script>
   <script src="../../geral.js"></script>
 </html>

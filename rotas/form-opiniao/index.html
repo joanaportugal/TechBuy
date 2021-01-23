@@ -3,29 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/icon.png" sizes="16x16" type="image/png" />
-    <link rel="stylesheet" href="../../../reset.css" />
+    <link rel="stylesheet" href="../../reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Os Meus Pedidos</title>
+    <title>Opnião Cliente</title>
   </head>
   <body>
     <header>
-      <img src="../../../images/icon.png" alt="TechBuy icon" id="techbuy_icon"/>
+      <img src="../../images/icon.png" alt="TechBuy icon" id="techbuy_icon" />
       <nav>
         <ul>
           <li>
-            <a href="../dashboard/index.html"
+            <a href="../a-minha-area/dashboard/index.html"
               >A Minha Área
-              <img src="../../../images/pessoa.png" alt="a minha área icon" />
+              <img src="../../images/pessoa.png" alt="a minha área icon" />
             </a>
           </li>
           <li><a href="#" id="logout">Logout</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+
+    <main>
+      <form>
+        <label for="opniao">Enviar opinião</label>
+        <textarea name="opniao" id="opnião" cols="30" rows="10"></textarea>
+        <input type="submit" value="Enviar" id="enviar_btn" />
+      </form>
+    </main>
   </body>
-  <script src="../../geral.js"></script>
+  <script src="../geral.js"></script>
   <script>
     let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
     let fez_login = lista_users.find((elemento) => elemento.a_usar === true);

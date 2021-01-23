@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icon.png" sizes="16x16" type="image/png" />
+    <link rel="stylesheet" href="../../../reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>As Minhas Informações</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="../../../images/icon.png"
+        alt="TechBuy icon"
+        id="techbuy_icon"
+      />
+      <nav>
+        <ul>
+          <li>
+            <a href="#"
+              >A Minha Área
+              <img src="../../../images/pessoa.png" alt="a minha área icon" />
+            </a>
+          </li>
+          <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>As minhas informações</h1>
+      <form id="info_form">
+        <img src="../../../images/pessoa.png" />
+        <div id="form">
+          <label for="Nome"
+            >Nome <input type="text" id="nome" name="nome"
+          /></label>
+          <label for="email"
+            >Email <input type="text" id="email" name="email" disabled
+          /></label>
+          <label for="morada"
+            >Morada <input type="text" id="morada" name="morada"
+          /></label>
+          <label for="Telefone"
+            >Telefone <input type="text" id="telefone" name="telefone"
+          /></label>
+        </div>
+        <fieldset>
+          <legend>Lista de cartões</legend>
+          <div id="lista_cartoes"></div>
+          <button id="adicionar_cartao">
+            <img src="../../../images/adicionar.png" alt="adicionar" />
+          </button>
+        </fieldset>
+        <button id="atualizar">Atualizar informações</button>
+      </form>
+    </main>
+  </body>
+  <script src="../../geral.js"></script>
+  <script src="./script.js"></script>
+</html>

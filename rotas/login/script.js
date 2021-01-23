@@ -21,7 +21,7 @@ login_form.addEventListener("submit", (e) => {
           elemento["a_usar"] = true;
         }
       });
-      let set_novo = localStorage.setItem("utilizadores", JSON.stringify(lista));
+      localStorage.setItem("utilizadores", JSON.stringify(lista));
       location.href = "http://127.0.0.1:5500/rotas/main/index.html";
     } else if (existe_email) {
       alert("Tente outra vez");

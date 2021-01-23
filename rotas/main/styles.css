@@ -111,6 +111,26 @@ main section #melhores_ofertas_imagens img {
   margin: 1rem;
 }
 
+footer {
+  background: #1974d2;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+}
+
+footer p {
+  text-align: right;
+}
+
 @media (min-width: 700px) {
   header nav ul {
     width: 14rem;
@@ -151,5 +171,10 @@ main section #melhores_ofertas_imagens img {
     width: 200px;
     height: 200px;
     margin: 0.6rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+    justify-content: space-between;
   }
 }

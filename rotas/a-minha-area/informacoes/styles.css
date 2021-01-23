@@ -147,7 +147,7 @@ form #atualizar {
 
   form img {
     width: 6rem;
-    height: 6rem;;
+    height: 6rem;
   }
 
   form #form {
@@ -163,15 +163,17 @@ form #atualizar {
 
   form fieldset {
     width: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  form fieldset #lista_cartoes {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  fieldset {
-    align-items: center;
+  form fieldset #lista_cartoes article {
+    margin: 0.5rem;
   }
-
-  
-form fieldset #lista_cartoes article {
-  margin-bottom: 0;
-}
 }

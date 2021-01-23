@@ -27,7 +27,7 @@ if (user_cartoes.length != 0) {
     ultimos_digitos = nr_cartao.slice(-4);
     let validade = cartao.validade;
 
-    elemento.innerHTML = `<article><p>Cartão que acaba em ${ultimos_digitos}</p><p>Validade: ${validade}</p></article>`;
+    elemento.innerHTML = `<article><p>Cartão que acaba<br>em ${ultimos_digitos}</p><p>Validade: ${validade}</p></article>`;
     lista_cartoes.append(elemento);
   }
 }
@@ -50,10 +50,10 @@ document.getElementById("adicionar_cartao").addEventListener("click", (e) => {
   e.preventDefault();
   lista_users.forEach((elemento) => {
     if (elemento.a_usar === true) {
-      nr_cartao = 0;
+      nr_cartao = "0";
       validade_mes = "0";
       validade_ano = "0";
-      while (!nr_cartao || nr_cartao.toString().length != 16) {
+      while (nr_cartao.length != 16) {
         nr_cartao = prompt(
           "Insira o número de cartão(sem espaços)\nModelo: ################",
           ""

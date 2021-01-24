@@ -24,7 +24,7 @@ if (procura_computadores) {
           ? `<p><span id="preco_antigo">${procura_computadores.preco} €</span><span>${procura_computadores.preco_promocao} €</span></p>`
           : `<p>${procura_computadores.preco} €</p>`
       }
-        <button>Comprar</button>
+        <button onclick='adicionar_carrinho("${procura_computadores.titulo}", "${procura_computadores.preco}")'>Comprar</button>
       </div>
     </div>
     <article>
@@ -49,7 +49,7 @@ if (procura_computadores) {
           ? `<p><span id="preco_antigo">${procura_telemoveis.preco} €</span><span>${procura_telemoveis.preco_promocao} €</span></p>`
           : `<p>${procura_telemoveis.preco} €</p>`
       }
-        <button>Comprar</button>
+        <button onclick='adicionar_carrinho("${procura_telemoveis.titulo}", "${procura_telemoveis.preco}")'>Comprar</button>
       </div>
     </div>
     <article>
@@ -65,3 +65,14 @@ if (procura_computadores) {
 }
 
 main.append(section);
+
+function adicionar_carrinho(produto, preco) {
+  let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
+  lista_users.forEach((user) => {
+    if (user["a_usar"] === true) {
+      carrinho = user.carrinho ? user.carrinho : [];
+      user.carrinho = [...carrinho, {produto, preco}];
+    }
+  });
+  localStorage.setItem("utilizadores", JSON.stringify(lista_users))
+}

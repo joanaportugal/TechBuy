@@ -1,7 +1,7 @@
-let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
+let lista = JSON.parse(localStorage.getItem("utilizadores"));
 user = {};
 
-lista_users.forEach((elemento) => {
+lista.forEach((elemento) => {
   if (elemento.a_usar === true) {
     user = elemento;
   }
@@ -34,21 +34,21 @@ if (user_cartoes.length != 0) {
 
 document.getElementById("atualizar").addEventListener("click", (e) => {
   e.preventDefault();
-  lista_users.forEach((elemento) => {
+  lista.forEach((elemento) => {
     if (elemento.a_usar === true) {
       elemento.nome = document.getElementById("nome").value;
       elemento.morada = document.getElementById("morada").value;
       elemento.telefone = document.getElementById("telefone").value;
     }
   });
-  localStorage.setItem("utilizadores", JSON.stringify(lista_users));
+  localStorage.setItem("utilizadores", JSON.stringify(lista));
   location.href =
     "http://127.0.0.1:5500/rotas/a-minha-area/informacoes/index.html";
 });
 
 document.getElementById("adicionar_cartao").addEventListener("click", (e) => {
   e.preventDefault();
-  lista_users.forEach((elemento) => {
+  lista.forEach((elemento) => {
     if (elemento.a_usar === true) {
       nr_cartao = "0";
       validade_mes = "0";
@@ -74,9 +74,7 @@ document.getElementById("adicionar_cartao").addEventListener("click", (e) => {
       elemento.cartoes = user_cartoes;
     }
   });
-  localStorage.setItem("utilizadores", JSON.stringify(lista_users));
+  localStorage.setItem("utilizadores", JSON.stringify(lista));
   location.href =
     "http://127.0.0.1:5500/rotas/a-minha-area/informacoes/index.html";
 });
-
-console.log(user);

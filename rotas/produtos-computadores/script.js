@@ -12,7 +12,7 @@ for (let i = 0; i < lista_computadores.length; i++) {
         <div class="valores"><p class="preco_antigo">${item.preco} €</p><p>${item.preco_promocao} €</p></div>
         <div class="buttons">
             <button onclick='detalhes("${item.titulo}")'>Ver detalhes</button>
-            <button onclick='adicionar_carrinho("${item.titulo}", "${item.preco}")'>Comprar</button>
+            <button onclick='adicionar_carrinho("${item.titulo}", ${item.preco_promocao})'>Adicionar ao carrinho</button>
         </div>
     </div>`;
   } else {
@@ -22,7 +22,7 @@ for (let i = 0; i < lista_computadores.length; i++) {
         <div class="valores"><p>${item.preco} €</p></div>
         <div class="buttons">
             <button onclick='detalhes("${item.titulo}")'>Ver detalhes</button>
-            <button onclick='adicionar_carrinho("${item.titulo}", "${item.preco}")'>Comprar</button>
+            <button onclick='adicionar_carrinho("${item.titulo}", ${item.preco})'>Adicionar ao carrinho</button>
         </div>
     </div>`;
   }

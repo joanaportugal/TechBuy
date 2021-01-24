@@ -24,7 +24,8 @@ if (procura_computadores) {
           ? `<p><span id="preco_antigo">${procura_computadores.preco} €</span><span>${procura_computadores.preco_promocao} €</span></p>`
           : `<p>${procura_computadores.preco} €</p>`
       }
-        <button onclick='adicionar_carrinho("${procura_computadores.titulo}", "${procura_computadores.preco}")'>Comprar</button>
+        <button onclick='adicionar_carrinho("${procura_computadores.titulo}",${procura_computadores.preco_promocao ?
+          procura_computadores.preco_promocao : procura_computadores.preco})'>Adicionar ao carrinho</button>
       </div>
     </div>
     <article>
@@ -49,7 +50,8 @@ if (procura_computadores) {
           ? `<p><span id="preco_antigo">${procura_telemoveis.preco} €</span><span>${procura_telemoveis.preco_promocao} €</span></p>`
           : `<p>${procura_telemoveis.preco} €</p>`
       }
-        <button onclick='adicionar_carrinho("${procura_telemoveis.titulo}", "${procura_telemoveis.preco}")'>Comprar</button>
+        <button onclick='adicionar_carrinho("${procura_telemoveis.titulo}", ${procura_telemoveis.preco_promocao ?
+        procura_telemoveis.preco_promocao : procura_telemoveis.preco})'>Adicionar ao carrinho</button>
       </div>
     </div>
     <article>

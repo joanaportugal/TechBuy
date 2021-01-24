@@ -32,15 +32,13 @@
           <h2>Melhores Ofertas</h2>
         </article>
 
-        <div id="melhores_ofertas_imagens">
-        </div>
+        <div id="melhores_ofertas_imagens"></div>
       </section>
     </main>
     <footer>
-      <a href="./rotas/form-opiniao/index.html">Enviar opinião</a>
       <div>
         <p>Escola Superior de Media Artes e Design</p>
-        <p>Rua D.Sancho I, n.º 981<br/>4480-876 Vila do Conde</p>
+        <p>Rua D.Sancho I, n.º 981<br />4480-876 Vila do Conde</p>
         <p>Telefone: +351 252 291 700</p>
         <p>Email: geral@esmad.ipp.pt</p>
       </div>
@@ -49,12 +47,10 @@
   <script>
     let lista_users = localStorage.getItem("utilizadores");
     if (lista_users) {
-      lista = JSON.parse(lista_users);
-      for (let i = 0; i < lista.length; i++) {
-        let item = lista[i];
-        if (item["a_usar"] === true) {
-          location.href = "http://127.0.0.1:5500/rotas/main/index.html";
-        }
+      let lista = JSON.parse(lista_users);
+      let user_logado = lista.find((user) => user.a_usar);
+      if (user_logado) {
+        location.href = "http://127.0.0.1:5500/rotas/main/index.html";
       }
     }
   </script>

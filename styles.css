@@ -110,7 +110,7 @@ footer {
   font-size: 14px;
   padding: 0.5rem 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -173,6 +173,5 @@ footer p {
 
   footer {
     padding: 0.5rem;
-    justify-content: space-between;
   }
 }

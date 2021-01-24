@@ -55,39 +55,6 @@ header nav ul li a img {
   margin: 0;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-main h1 {
-  margin: 2rem 0;
-}
-
-main #lista_produtos {
-  width: 80%;
-  background: #00031f;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-main #lista_produtos p {
-  margin: 1rem 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-main #lista_produtos button {
-  margin: 1rem 0;
-  width: 80%;
-  height: 3rem;
-  background: white;
-  border: 2px solid black;
-}
-
 @media (min-width: 700px) {
   header nav ul {
     width: 14rem;
@@ -108,9 +75,5 @@ main #lista_produtos button {
 
   main nav ul a {
     font-size: 1.4rem;
-  }
-
-  main #lista_produtos {
-    width: 50%;
   }
 }

@@ -6,19 +6,15 @@
     <link rel="icon" href="./images/icon.png" sizes="16x16" type="image/png" />
     <link rel="stylesheet" href="../../../reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>A Minha Área</title>
+    <title>As Minhas Encomendas</title>
   </head>
   <body>
     <header>
-      <img
-        src="../../../images/icon.png"
-        alt="TechBuy icon"
-        id="techbuy_icon"
-      />
+      <img src="../../../images/icon.png" alt="TechBuy icon" id="techbuy_icon"/>
       <nav>
         <ul>
           <li>
-            <a href="#"
+            <a href="../dashboard/index.html"
               >A Minha Área
               <img src="../../../images/pessoa.png" alt="a minha área icon" />
             </a>
@@ -27,24 +23,9 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>A Minha Área</h1>
-      <section>
-        <button id="info_btn">
-          <img src="../../../images/pessoa.png" alt="informaçóes icon" />
-          <p>As minhas informações</p>
-        </button>
-        <button id="pedidos_btn">
-          <img src="../../../images/encomenda.png" alt="informaçóes icon" />
-          <p>As minhas encomendas</p>
-        </button>
-        <button id="cesta_btn">
-          <img src="../../../images/cesta.png" alt="informaçóes icon" />
-          <p>A minha cesta</p>
-        </button>
-      </section>
-    </main>
+    <main></main>
   </body>
+  <script src="../../geral.js"></script>
   <script>
     let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
     let fez_login = lista_users.find((elemento) => elemento.a_usar === true);
@@ -52,6 +33,4 @@
       location.href = "http://127.0.0.1:5500/index.html";
     }
   </script>
-  <script src="../../geral.js"></script>
-  <script src="./script.js"></script>
 </html>

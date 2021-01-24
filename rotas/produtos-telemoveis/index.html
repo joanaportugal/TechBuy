@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="../../reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>TechBuy</title>
+    <title>Telemóveis</title>
   </head>
   <body>
     <header>
@@ -32,31 +32,18 @@
     <main>
       <nav>
         <ul>
-          <li><a href="../produtos-computadores/index.html">Computadores</a></li>
+          <li>
+            <a href="../produtos-computadores/index.html">Computadores</a>
+          </li>
           <li><a href="../produtos-telemoveis/index.html">Telemóveis</a></li>
         </ul>
       </nav>
 
-      <section>
-        <article>
-          <h2>Melhores Ofertas</h2>
-        </article>
+      <h1>Os nossos telemóveis</h1>
 
-        <div id="melhores_ofertas_imagens">
-        </div>
-      </section>
+      <section id="items_lista"></section>
     </main>
-    <footer>
-      <a href="../form-opiniao/index.html">Enviar opinião</a>
-      <div>
-        <p>Escola Superior de Media Artes e Design</p>
-        <p>Rua D.Sancho I, n.º 981<br />4480-876 Vila do Conde</p>
-        <p>Telefone: +351 252 291 700</p>
-        <p>Email: geral@esmad.ipp.pt</p>
-      </div>
-    </footer>
   </body>
-  <script src="../geral.js"></script>
   <script>
     let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
     let fez_login = lista_users.find((elemento) => elemento.a_usar === true);
@@ -64,5 +51,6 @@
       location.href = "http://127.0.0.1:5500/index.html";
     }
   </script>
+  <script src="../geral.js"></script>
   <script src="./script.js"></script>
 </html>

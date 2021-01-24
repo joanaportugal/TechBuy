@@ -1,0 +1,186 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background: rgba(9, 22, 65, 0.4);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+header {
+  width: 100%;
+  height: 4.5rem;
+  background: #1974d2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 1rem;
+}
+
+header nav {
+  margin-right: 1rem;
+}
+
+header nav ul {
+  width: 12rem;
+}
+
+header nav ul li {
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+}
+
+header nav ul li a img {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main nav {
+  width: 16rem;
+  height: 2.4rem;
+  background: #00031f;
+}
+
+main nav ul {
+  margin: 0.4rem 0.5rem;
+}
+
+main nav ul li a {
+  color: white;
+}
+
+main section {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main section #info_principal img {
+  width: 14rem;
+  height: 14rem;
+  margin-top: 1rem;
+}
+
+main section #info_principal #precos {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+main section #info_principal p {
+  display: flex;
+  justify-content: space-between;
+}
+
+main section #info_principal #precos #preco_antigo {
+  padding-right: 1rem;
+  text-decoration: line-through;
+}
+
+main section #info_principal button {
+  margin-top: 1rem;
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  background: white;
+  border: 1px solid black;
+  font-size: 1rem;
+}
+
+main section article {
+  width: 100%;
+}
+
+main section article h2 {
+  margin: 1rem 0;
+}
+
+main section article p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.6rem;
+  border-bottom: 2px solid black;
+}
+
+@media (min-width: 700px) {
+  header nav ul {
+    width: 14rem;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  main nav {
+    width: 20rem;
+    height: 3rem;
+  }
+
+  main nav ul {
+    margin: 0.5rem 1rem;
+  }
+
+  main nav ul a {
+    font-size: 1.4rem;
+  }
+
+  main section {
+    width: 40%;
+  }
+
+  main section #info_principal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main section #info_principal #precos {
+    margin: 1rem;
+    width: 100%;
+  }
+
+  main section #info_principal p {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main section #info_principal #precos #preco_antigo {
+    padding-right: 0;
+  }
+
+  main section article {
+    width: 70%;
+  }
+}

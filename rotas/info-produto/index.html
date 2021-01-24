@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="../../reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>TechBuy</title>
   </head>
   <body>
     <header>
@@ -32,37 +31,25 @@
     <main>
       <nav>
         <ul>
-          <li><a href="../produtos-computadores/index.html">Computadores</a></li>
+          <li>
+            <a href="../produtos-computadores/index.html">Computadores</a>
+          </li>
           <li><a href="../produtos-telemoveis/index.html">Telemóveis</a></li>
         </ul>
       </nav>
-
-      <section>
-        <article>
-          <h2>Melhores Ofertas</h2>
-        </article>
-
-        <div id="melhores_ofertas_imagens">
-        </div>
-      </section>
     </main>
-    <footer>
-      <a href="../form-opiniao/index.html">Enviar opinião</a>
-      <div>
-        <p>Escola Superior de Media Artes e Design</p>
-        <p>Rua D.Sancho I, n.º 981<br />4480-876 Vila do Conde</p>
-        <p>Telefone: +351 252 291 700</p>
-        <p>Email: geral@esmad.ipp.pt</p>
-      </div>
-    </footer>
   </body>
-  <script src="../geral.js"></script>
   <script>
     let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
     let fez_login = lista_users.find((elemento) => elemento.a_usar === true);
     if (!fez_login) {
       location.href = "http://127.0.0.1:5500/index.html";
     }
+    let existe_produto = localStorage.getItem("produto_visualizar");
+    if (!existe_produto) {
+      location.href = "http://127.0.0.1:5500/rotas/main/index.html";
+    }
   </script>
+  <script src="../geral.js"></script>
   <script src="./script.js"></script>
 </html>

@@ -47,6 +47,7 @@ comprar_encomenda.addEventListener("click", (e) => {
           contacto_email: user.email,
           contacto_telefone: user.telefone,
           pagamento: lista_cartoes_select.value,
+          total: total
         };
         user.encomendas = [...encomendas, nova_encomenda];
         delete user.carrinho;

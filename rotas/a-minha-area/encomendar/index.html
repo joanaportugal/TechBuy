@@ -6,7 +6,7 @@
     <link rel="icon" href="./images/icon.png" sizes="16x16" type="image/png" />
     <link rel="stylesheet" href="../../../reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>A Minha Área</title>
+    <title>As Minhas Encomendas</title>
   </head>
   <body>
     <header>
@@ -18,7 +18,7 @@
       <nav>
         <ul>
           <li>
-            <a href="#"
+            <a href="../dashboard/index.html"
               >A Minha Área
               <img src="../../../images/pessoa.png" alt="a minha área icon" />
             </a>
@@ -28,23 +28,34 @@
       </nav>
     </header>
     <main>
-      <h1>A Minha Área</h1>
-      <section>
-        <button id="info_btn">
-          <img src="../../../images/pessoa.png" alt="informaçóes icon" />
-          <p>As minhas informações</p>
-        </button>
-        <button id="pedidos_btn">
-          <img src="../../../images/encomenda.png" alt="informaçóes icon" />
-          <p>As minhas encomendas</p>
-        </button>
-        <button id="cesta_btn">
-          <img src="../../../images/cesta.png" alt="informaçóes icon" />
-          <p>A minha cesta</p>
-        </button>
-      </section>
+      <h1>Pagar</h1>
+      <form>
+        <label for="email"
+          >Email <input type="email" id="email" name="email" readonly
+        /></label>
+        <label for="nome"
+          >Nome <input type="text" id="nome" name="nome" readonly
+        /></label>
+        <label for="morada"
+          >Morada <input type="text" id="morada" name="morada" readonly
+        /></label>
+        <label for="telefone"
+          >Telefone <input type="text" id="telefone" name="telefone" readonly
+        /></label>
+        <label for="cartao"
+          >Forma de pagamento
+          <select id="lista_cartoes">
+            <option value="">Escolha um cartão</option>
+          </select>
+        </label>
+        <fieldset id="lista_produtos">
+          <legend>Lista de produtos</legend>
+        </fieldset>
+        <button id="comprar_encomenda">Comprar</button>
+      </form>
     </main>
   </body>
+  <script src="../../geral.js"></script>
   <script>
     let lista_users = JSON.parse(localStorage.getItem("utilizadores"));
     let fez_login = lista_users.find((elemento) => elemento.a_usar === true);
@@ -52,6 +63,5 @@
       location.href = "http://127.0.0.1:5500/index.html";
     }
   </script>
-  <script src="../../geral.js"></script>
   <script src="./script.js"></script>
 </html>

@@ -39,6 +39,16 @@
                 </br>
         </section>
     </main>
+    <script>
+        let lista_users = localStorage.getItem("utilizadores");
+        if (lista_users) {
+          let lista = JSON.parse(lista_users);
+          let user_logado = lista.find((user) => user.a_usar);
+          if (user_logado) {
+            location.href = "http://127.0.0.1:5500/rotas/main/index.html";
+          }
+        }
+      </script>
     <script src="./script.js"></script>
 </body>
 </html>

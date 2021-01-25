@@ -10,7 +10,11 @@
   </head>
   <body>
     <header>
-      <img src="../../../images/icon.png" alt="TechBuy icon" id="techbuy_icon"/>
+      <img
+        src="../../../images/icon.png"
+        alt="TechBuy icon"
+        id="techbuy_icon"
+      />
       <nav>
         <ul>
           <li>
@@ -23,7 +27,33 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <h1>Pagar</h1>
+      <form>
+        <label for="email"
+          >Email <input type="email" id="email" name="email" readonly
+        /></label>
+        <label for="nome"
+          >Nome <input type="text" id="nome" name="nome" readonly
+        /></label>
+        <label for="morada"
+          >Morada <input type="text" id="morada" name="morada" readonly
+        /></label>
+        <label for="telefone"
+          >Telefone <input type="text" id="telefone" name="telefone" readonly
+        /></label>
+        <label for="cartao"
+          >Forma de pagamento
+          <select id="lista_cartoes">
+            <option value="">Escolha um cartão</option>
+          </select>
+        </label>
+        <fieldset id="lista_produtos">
+          <legend>Lista de produtos</legend>
+        </fieldset>
+        <button id="comprar_encomenda">Comprar</button>
+      </form>
+    </main>
   </body>
   <script src="../../geral.js"></script>
   <script>
@@ -33,4 +63,5 @@
       location.href = "http://127.0.0.1:5500/index.html";
     }
   </script>
+  <script src="./script.js"></script>
 </html>
